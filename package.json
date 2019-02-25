@@ -1,0 +1,23 @@
+{
+  "name": "@tsb/flusshygiene-utils",
+  "version": "0.1.0",
+  "description": "shared code for the flusshygiene project at tsb",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^11.9.5",
+    "cz-conventional-changelog": "^2.1.0",
+    "tslint": "^5.13.0",
+    "typescript": "^3.3.3333"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
