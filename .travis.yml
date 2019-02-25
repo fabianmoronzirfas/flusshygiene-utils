@@ -1,9 +1,15 @@
 language: node_js
 node_js:
-- "10"
-
+- '10'
 install:
-  - npm install
-
+- npm install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: npm
+  email: icke@fabianmoronzirfas.me
+  api_key:
+    secure: $NPM_API_TOKEN
+  on:
+    repo: technologiestiftung/flusshygiene-utils
+    tags: true
