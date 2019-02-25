@@ -4,7 +4,6 @@
   "description": "shared code for the flusshygiene project at tsb",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest"
   },
   "author": "",
   "license": "MIT",
@@ -19,5 +18,14 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technologiestiftung/flusshygiene-utils.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/technologiestiftung/flusshygiene-utils/issues"
+  },
+  "homepage": "https://github.com/technologiestiftung/flusshygiene-utils#readme"
 }
