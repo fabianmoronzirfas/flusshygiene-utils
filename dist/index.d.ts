@@ -1,2 +1,7 @@
 import devlogGen from './lib/devlog';
-export = devlogGen;
+import protocoolMessage from './lib/protocool';
+declare const _default: {
+    devlogGen: typeof devlogGen;
+    protocoolMessage: typeof protocoolMessage;
+};
+export = _default;
