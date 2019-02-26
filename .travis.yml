@@ -7,7 +7,7 @@ script:
 - npm test
 deploy:
   provider: npm
-  email: icke@fabianmoronzirfas.me
+  email: $NPM_EMAIL
   api_key:
     secure: $NPM_API_TOKEN
   on:
