@@ -1,7 +1,7 @@
-interface IPayload {
+export interface IPayload {
     [possible: string]: any;
 }
-interface IProtocoolMessage {
+export interface IProtocoolMessage {
     type?: string;
     payload?: IPayload;
 }
@@ -11,4 +11,3 @@ interface IProtocoolMessage {
  * @returns JSON stringifed object
  */
 export default function protocoolMessage(msg?: IProtocoolMessage): string;
-export {};
