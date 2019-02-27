@@ -11,10 +11,13 @@ export interface IProtocoolMessage  {
  * @param msg an IProtocoolMessage Object that has a type (default is default)
  * @returns JSON stringifed object
  */
-export default function protocoolMessage(msg: IProtocoolMessage = {type: 'default'}): string {
+export default function protocoolMessage(msg: object|string = {type: 'DEFAULT'}): string {
 
-  if (msg.hasOwnProperty('type') === false) {
-    msg.type = 'default';
+  if (msg.hasOwnProperty('type') === false && typeof msg === 'object') {
+    msg = {...msg, ...{type: 'DEFAULT'}};
+  }
+  if (typeof msg === 'string') {
+    msg = {type: 'DEFAULT', payload: msg};
   }
   return JSON.stringify(msg);
 }
