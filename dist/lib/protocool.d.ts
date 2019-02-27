@@ -10,4 +10,4 @@ export interface IProtocoolMessage {
  * @param msg an IProtocoolMessage Object that has a type (default is default)
  * @returns JSON stringifed object
  */
-export default function protocoolMessage(msg?: IProtocoolMessage): string;
+export default function protocoolMessage(msg?: object | string): string;
