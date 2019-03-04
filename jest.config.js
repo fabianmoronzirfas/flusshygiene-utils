@@ -10,7 +10,6 @@ module.exports = {
   "text-summary"],
   "collectCoverageFrom": [
     "src/**/*.{ts,tsx}",
-    "!src/index.ts",
     "!src/lib/async-routes.ts",
     "!**/node_modules/**",
     "!**/build/**",

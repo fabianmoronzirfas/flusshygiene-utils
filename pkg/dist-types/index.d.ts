@@ -1,7 +1,4 @@
 import devlogGen from './lib/devlog';
 import protocoolMessage from './lib/protocool';
-declare const _default: {
-    devlogGen: typeof devlogGen;
-    protocoolMessage: typeof protocoolMessage;
-};
-export default _default;
+export declare const devlogger: typeof devlogGen;
+export declare const protomessage: typeof protocoolMessage;

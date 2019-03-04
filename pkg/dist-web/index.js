@@ -69,9 +69,7 @@ function protocoolMessage() {
   return JSON.stringify(msg);
 }
 
-var index = {
-  devlogGen,
-  protocoolMessage
-};
+const devlogger = devlogGen;
+const protomessage = protocoolMessage;
 
-export default index;
+export { devlogger, protomessage };
