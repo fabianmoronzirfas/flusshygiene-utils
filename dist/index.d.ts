@@ -4,4 +4,4 @@ declare const _default: {
     devlogGen: typeof devlogGen;
     protocoolMessage: typeof protocoolMessage;
 };
-export = _default;
+export default _default;
