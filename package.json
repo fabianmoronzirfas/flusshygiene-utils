@@ -4,19 +4,46 @@
   "description": "shared code for the flusshygiene project at tsb",
   "main": "dist/index.js",
   "scripts": {
+    "pack": "pack",
     "test": "jest",
     "testWithCoverage": "jest --coverage",
     "build": "tsc -p ."
   },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "__tests__/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build"
+      "pre-commit": "# npm run build"
     }
   },
   "author": "",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "@pika/pack": "^0.3.4",
+    "@pika/plugin-build-node": "^0.3.13",
+    "@pika/plugin-build-web": "^0.3.13",
+    "@pika/plugin-standard-pkg": "^0.3.13",
+    "@pika/plugin-ts-standard-pkg": "^0.3.13",
     "@types/jest": "^24.0.6",
     "@types/node": "^11.9.5",
     "cz-conventional-changelog": "^2.1.0",
